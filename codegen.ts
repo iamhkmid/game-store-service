@@ -5,6 +5,9 @@ import { PORT } from './src';
 const config: CodegenConfig = {
   overwrite: true,
   schema: `http://localhost:${PORT}/graphql`,
+  config: {
+    enumsAsConst: true
+  },
   generates: {
     "src/types/graphql.types.ts": {
       plugins: ["typescript", "typescript-resolvers"],

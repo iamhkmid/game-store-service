@@ -45,11 +45,12 @@ export type User = {
   username?: Maybe<Scalars['String']['output']>;
 };
 
-export enum UserRole {
-  Admin = 'ADMIN',
-  User = 'USER'
-}
+export const UserRole = {
+  Admin: 'ADMIN',
+  User: 'USER'
+} as const;
 
+export type UserRole = typeof UserRole[keyof typeof UserRole];
 
 
 export type ResolverTypeWrapper<T> = Promise<T> | T;
