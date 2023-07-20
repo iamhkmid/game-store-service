@@ -1,0 +1,11 @@
+{
+  "watch": [
+    "."
+  ],
+  "ext": ".ts,.js,.graphql",
+  "ignore": [
+    "node_modules",
+    "dist"
+  ],
+  "exec": "ts-node --files ./src/index.ts"
+}

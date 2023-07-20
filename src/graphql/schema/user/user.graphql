@@ -1,0 +1,23 @@
+type Query {
+  user(userId: String!): User
+  users: [User] @auth(requires: ADMIN)
+}
+
+type Mutation {
+  addUser: User
+}
+
+type User @auth(requires: USER) {
+  id: String
+  username: String
+  name: String
+  password: String @auth(requires: ADMIN)
+  role: UserRole
+  createdAt: Date
+  updatedAt: Date @auth(requires: ADMIN)
+}
+
+enum UserRole {
+  ADMIN
+  USER
+}
