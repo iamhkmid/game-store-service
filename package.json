@@ -2,7 +2,7 @@
   "name": "game-store-service",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/src/index.js",
+  "main": "./dist/src/index.js",
   "author": "Muhammad Luqmanul Hakim",
   "license": "ISC",
   "prisma": {
