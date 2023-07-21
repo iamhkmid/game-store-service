@@ -13,6 +13,9 @@
       "yarn lint"
     ]
   },
+  "engines": {
+    "node": "16.x"
+  },
   "scripts": {
     "dev": "cross-env NODE_OPTIONS='--openssl-legacy-provider' NODE_ENV=development nodemon",
     "dev:unix": "cross-env NODE_ENV=development nodemon",

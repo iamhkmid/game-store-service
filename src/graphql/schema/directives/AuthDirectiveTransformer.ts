@@ -1,5 +1,5 @@
-import { defaultFieldResolver, GraphQLSchema } from "graphql";
-import { mapSchema, getDirective, MapperKind } from "@graphql-tools/utils";
+import { defaultFieldResolver, GraphQLSchema } from "graphql"
+import { mapSchema, getDirective, MapperKind } from "@graphql-tools/utils"
 
 const typeDirectiveArgumentMaps: Record<string, any> = {}
 
@@ -34,4 +34,4 @@ const AuthDirectiveTransformer = (schema: GraphQLSchema, directiveName: string) 
     }
   })
 
-export default AuthDirectiveTransformer;
+export default AuthDirectiveTransformer
