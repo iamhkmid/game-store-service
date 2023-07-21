@@ -1,4 +1,4 @@
-import { PrismaClient } from '@prisma/client'
+import { Prisma, PrismaClient } from '@prisma/client'
 import bcrypt from "bcrypt"
 
 const prisma = new PrismaClient()
@@ -8,12 +8,12 @@ async function main() {
   const salt = await bcrypt.genSalt();
   const password1 = await bcrypt.hash("altair123", salt);
 
-  const userData = [
+  const userData: Prisma.UserCreateInput[] = [
     {
       name: "Muhammad Luqmanul Hakim",
       username: "iamhkmid",
       password: password1,
-      role: "ADMIN"
+      role: "ADMIN",
     },
   ]
 
